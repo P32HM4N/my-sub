@@ -18,11 +18,11 @@ jobs:
 
       - name: Download
         run: |
-          curl -L "https://raw.githubusercontent.com/pesarkermani/my_sub/main/sub.txt" -o sub.txt
+          curl -L "${{ secrets.SOURCE_URL }}" -o sub.txt
 
       - name: Replace Name
         run: |
-          sed -i 's/NamazVPN/PEZHMAN/g' sub.txt
+          sed -i 's/${{ secrets.OLD_NAME}}/${{ secrets.NEW_NAME }}/g' sub.txt
 
       - name: Commit and Push
         run: |
