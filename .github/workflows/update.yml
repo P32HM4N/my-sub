@@ -21,7 +21,7 @@ jobs:
 
       - name: Replace Name
         run: |
-          sed -i 's/@NamazVPN/@PEZHMAN/g' sub.txt
+          sed -i 's/NamazVPN/PEZHMAN/g' sub.txt
 
       - name: Commit
         run: |
